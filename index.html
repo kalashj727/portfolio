@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kalash Jain — Economics · Research · Data Analytics</title>
+<meta name="description" content="Portfolio of Kalash Jain — Economics (Honours) undergraduate specializing in equity & financial research, market research, and data-driven analysis (Python, SQL, Power BI)." />
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --soft:#64748b; --bg:#ffffff; --panel:#f8fafc;
+    --line:#e2e8f0; --accent:#1d4ed8; --accent2:#0ea5e9; --good:#059669; --chip:#eef2ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--ink); background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:980px; margin:0 auto; padding:0 22px}
+  .muted{color:var(--muted)}
+  section{padding:46px 0; border-top:1px solid var(--line)}
+  h1,h2,h3{line-height:1.25; margin:0 0 10px}
+  h2{font-size:1.5rem; letter-spacing:-.01em}
+  h2 .num{color:var(--accent); font-weight:700; margin-right:8px}
+  .lead{font-size:1.06rem; color:var(--muted)}
+
+  /* HERO */
+  header.hero{
+    background:linear-gradient(160deg,#0f172a 0%,#13243f 55%,#0b2a4a 100%);
+    color:#fff; padding:52px 0 44px;
+  }
+  .hero h1{font-size:2.5rem; letter-spacing:-.02em; margin-bottom:6px}
+  .hero .role{font-size:1.15rem; color:#cbd5e1; font-weight:600}
+  .hero .tag{margin:16px 0 22px; max-width:680px; color:#e2e8f0}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px}
+  .chip{
+    background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18);
+    color:#e2e8f0; padding:6px 11px; border-radius:999px; font-size:.86rem;
+  }
+  .chip a{color:#fff}
+  .btns{display:flex; flex-wrap:wrap; gap:10px}
+  .btn{
+    display:inline-block; padding:10px 16px; border-radius:8px; font-weight:600; font-size:.92rem;
+    background:#fff; color:#0f172a; border:1px solid transparent;
+  }
+  .btn.alt{background:transparent; color:#fff; border:1px solid rgba(255,255,255,.35)}
+  .btn:hover{text-decoration:none; opacity:.92}
+
+  /* CARDS */
+  .grid{display:grid; gap:18px}
+  .proj{
+    border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff;
+  }
+  .proj .body{padding:20px 22px}
+  .proj h3{font-size:1.2rem; margin-bottom:4px}
+  .kicker{font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
+  ul.clean{margin:10px 0 0; padding-left:18px}
+  ul.clean li{margin:4px 0}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+  .tags span{background:var(--chip); color:#3730a3; font-size:.78rem; padding:4px 9px; border-radius:6px; font-weight:600}
+  .links-row{margin-top:14px; display:flex; gap:14px; flex-wrap:wrap; font-weight:600; font-size:.92rem}
+
+  /* DASHBOARD */
+  .dash{background:var(--panel); border-bottom:1px solid var(--line); padding:18px 22px}
+  .dash-head{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px; flex-wrap:wrap}
+  .dash-head .t{font-weight:700; font-size:.95rem}
+  .badge{font-size:.72rem; background:#fff; border:1px solid var(--line); color:var(--soft); padding:3px 8px; border-radius:6px}
+  .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:14px}
+  .kpi{background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px}
+  .kpi .v{font-size:1.35rem; font-weight:800; color:var(--ink)}
+  .kpi .v.green{color:var(--good)}
+  .kpi .l{font-size:.78rem; color:var(--soft)}
+  .charts{display:grid; grid-template-columns:1.4fr 1fr; gap:12px}
+  .panel{background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px}
+  .panel .pt{font-size:.8rem; font-weight:700; color:var(--muted); margin-bottom:6px}
+  .cap{font-size:.74rem; color:var(--soft); margin-top:8px; font-style:italic}
+  svg{display:block; width:100%; height:auto}
+
+  /* SKILLS / EDU */
+  .skillgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+  .skillgrid h3{font-size:1rem; color:var(--accent)}
+  .pill{display:inline-block; background:var(--panel); border:1px solid var(--line); padding:5px 10px; border-radius:999px; font-size:.85rem; margin:3px 4px 3px 0}
+  .edu .item{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; border-bottom:1px dashed var(--line); padding:10px 0}
+  .edu .item:last-child{border-bottom:none}
+  .edu .when{color:var(--soft); font-size:.9rem; white-space:nowrap}
+
+  footer{padding:30px 0 50px; color:var(--soft); font-size:.9rem; border-top:1px solid var(--line)}
+  .note{background:#fffbeb; border:1px solid #fde68a; color:#92400e; padding:10px 14px; border-radius:8px; font-size:.85rem; margin-top:14px}
+
+  @media (max-width:720px){
+    .hero h1{font-size:2rem}
+    .charts{grid-template-columns:1fr}
+    .kpis{grid-template-columns:1fr}
+    .skillgrid{grid-template-columns:1fr}
+  }
+  @media print{
+    header.hero{background:#0f172a !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .btns,.note{display:none}
+    section{padding:22px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Kalash Jain</h1>
+    <div class="role">Economics (Honours) · Equity &amp; Market Research · Data Analytics</div>
+    <p class="tag">Economics undergraduate who actually ships analysis — Python, SQL, Power BI, and financial modeling — across equity research, market research, and consulting. Graduating May 2027 · Pune, India.</p>
+    <div class="chips">
+      <span class="chip">📍 Pune, India</span>
+      <span class="chip"><a href="mailto:kalashj727@gmail.com">✉ kalashj727@gmail.com</a></span>
+      <span class="chip">📞 +91 98261 39650</span>
+      <span class="chip"><a href="https://linkedin.com/in/kalashjainx" target="_blank" rel="noopener">in/kalashjainx</a></span>
+    </div>
+    <div class="btns">
+      <a class="btn" href="https://github.com/kalashj727/portfolio/blob/main/EconAI_Demand_Forecasting.ipynb" target="_blank" rel="noopener">View EconAI notebook ↗</a>
+      <a class="btn alt" href="https://linkedin.com/in/kalashjainx" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn alt" href="Kalash%20Resume.pdf" target="_blank" rel="noopener">Download résumé ↓</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2><span class="num">01</span>About</h2>
+    <p class="lead">I sit in the gap most applicants miss: economics reasoning <em>and</em> real data tooling. I read a financial statement, build a model in Excel or Python, and turn messy data into a dashboard or an investment thesis. My experience spans equity research (Value Educator), market &amp; competitor analysis (Robusst), strategy &amp; operations consulting (180 Degrees Consulting), and a self-built markets-research platform (Finologix) I grew to 15,000+ organic readers.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2><span class="num">02</span>Featured Work</h2>
+    <div class="grid">
+
+      <!-- EconAI -->
+      <article class="proj">
+        <div class="dash">
+          <div class="dash-head">
+            <div class="t">EconAI — Demand Forecasting Dashboard</div>
+            <div class="badge">Sample data</div>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><div class="v green">~18%</div><div class="l">lower forecast error vs. seasonal-naive baseline</div></div>
+            <div class="kpi"><div class="v">12 mo</div><div class="l">hold-out horizon (time-based test split)</div></div>
+            <div class="kpi"><div class="v">Python · Power BI</div><div class="l">Pandas · Scikit-learn · DAX</div></div>
+          </div>
+          <div class="charts">
+            <div class="panel">
+              <div class="pt">Actual vs. forecast — monthly demand</div>
+              <svg viewBox="0 0 520 210" role="img" aria-label="Line chart of actual versus forecast demand">
+                <line x1="50" y1="190" x2="505" y2="190" stroke="#cbd5e1" stroke-width="1"/>
+                <line x1="50" y1="30" x2="50" y2="190" stroke="#cbd5e1" stroke-width="1"/>
+                <polyline fill="none" stroke="#1d4ed8" stroke-width="2.5"
+                  points="50,163 91,142 132,123 173,131 214,110 255,94 296,102 337,83 378,62 419,30 460,43 500,67"/>
+                <polyline fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-dasharray="5 4"
+                  points="50,158 91,147 132,118 173,137 214,113 255,89 296,107 337,78 378,67 419,38 460,35 500,73"/>
+                <g font-size="11" fill="#64748b">
+                  <text x="50" y="204">Jan</text>
+                  <text x="250" y="204">Jun</text>
+                  <text x="470" y="204">Dec</text>
+                </g>
+                <g font-size="11">
+                  <rect x="320" y="6" width="14" height="3" fill="#1d4ed8"/><text x="338" y="11" fill="#475569">Actual</text>
+                  <rect x="410" y="6" width="14" height="3" fill="#0ea5e9"/><text x="428" y="11" fill="#475569">Forecast</text>
+                </g>
+              </svg>
+            </div>
+            <div class="panel">
+              <div class="pt">Forecast error (MAPE %) by model</div>
+              <svg viewBox="0 0 340 210" role="img" aria-label="Bar chart of MAPE by model">
+                <line x1="40" y1="190" x2="330" y2="190" stroke="#cbd5e1" stroke-width="1"/>
+                <g>
+                  <rect x="60" y="43" width="60" height="147" rx="3" fill="#94a3b8"/>
+                  <text x="90" y="36" font-size="12" fill="#0f172a" text-anchor="middle" font-weight="700">9.8</text>
+                  <rect x="150" y="64" width="60" height="126" rx="3" fill="#1d4ed8"/>
+                  <text x="180" y="57" font-size="12" fill="#0f172a" text-anchor="middle" font-weight="700">8.4</text>
+                  <rect x="240" y="70" width="60" height="120" rx="3" fill="#059669"/>
+                  <text x="270" y="63" font-size="12" fill="#0f172a" text-anchor="middle" font-weight="700">8.0</text>
+                </g>
+                <g font-size="10.5" fill="#64748b" text-anchor="middle">
+                  <text x="90" y="204">Baseline</text>
+                  <text x="180" y="204">Linear</text>
+                  <text x="270" y="204">RandForest</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="cap">Illustrative visualization of the EconAI forecasting output (sample data). Full Power BI dashboard available on request.</div>
+        </div>
+        <div class="body">
+          <div class="kicker">Predictive Market Analytics</div>
+          <h3>EconAI — Tier-2 city demand forecasting</h3>
+          <p class="muted">Built a demand-forecasting model for Tier-2 markets using time-series and multivariable regression, and deployed Power BI dashboards for exploratory analysis of macro and demand trends.</p>
+          <ul class="clean">
+            <li>Engineered calendar, lag, and rolling features; compared a seasonal-naive baseline against Linear Regression and Random Forest on a time-based hold-out.</li>
+            <li>Improved forecast accuracy by ~18% over baseline; surfaced the biggest demand drivers (festival months, promotions, local income).</li>
+            <li>Fully reproducible notebook (synthetic data) — swap in a real dataset to regenerate results.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Power BI</span><span>Regression</span><span>Time series</span></div>
+          <div class="links-row">
+            <a href="https://github.com/kalashj727/portfolio/blob/main/EconAI_Demand_Forecasting.ipynb" target="_blank" rel="noopener">View notebook ↗</a>
+            <a href="https://github.com/kalashj727/portfolio" target="_blank" rel="noopener">Repository ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Equity Research -->
+      <article class="proj">
+        <div class="body">
+          <div class="kicker">Financial Analysis</div>
+          <h3>Equity Research — Indian Banking Sector</h3>
+          <p class="muted">Fundamental analysis of leading Indian banks — profitability, asset quality, and valuation — built during my equity-research internship at Value Educator and extended independently.</p>
+          <ul class="clean">
+            <li>Compared banks on NIM, GNPA/NNPA, CASA, ROA/ROE, and P/B to frame relative value.</li>
+            <li>Linked balance-sheet quality to valuation multiples to develop a comparative investment view.</li>
+          </ul>
+          <div class="tags"><span>Equity Research</span><span>Valuation</span><span>Financial Statements</span><span>Excel</span></div>
+          <div class="links-row">
+            <a href="Finologix_Note_1_Bank_Equity_Research_Framework.md" target="_blank" rel="noopener">Read the framework note ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Finologix -->
+      <article class="proj">
+        <div class="body">
+          <div class="kicker">Founder · Research &amp; Writing</div>
+          <h3>Finologix — markets &amp; macro research</h3>
+          <p class="muted">A finance and business-research platform I founded and scaled to 15,000+ organic readers, covering markets, investing, and macroeconomics. Selected research writing:</p>
+          <ul class="clean">
+            <li><a href="Finologix_Note_1_Bank_Equity_Research_Framework.md" target="_blank" rel="noopener">Reading a Bank's Health — a practical framework for equity research</a></li>
+            <li><a href="Finologix_Note_2_QE_and_Wealth_Inequality.md" target="_blank" rel="noopener">Quantitative Easing &amp; the wealth gap — what the transmission mechanism actually does</a></li>
+          </ul>
+          <div class="tags"><span>Research Writing</span><span>Macroeconomics</span><span>Markets</span><span>Audience Analytics</span></div>
+        </div>
+      </article>
+
+    </div>
+    <!-- internal note removed for public site -->
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2><span class="num">03</span>Skills</h2>
+    <div class="skillgrid">
+      <div>
+        <h3>Tools</h3>
+        <span class="pill">Python (Pandas, Scikit-learn)</span><span class="pill">SQL</span><span class="pill">Power BI</span><span class="pill">Advanced Excel</span><span class="pill">Pivot Tables / VLOOKUP / Macros</span>
+      </div>
+      <div>
+        <h3>Analytics</h3>
+        <span class="pill">Financial Modeling</span><span class="pill">Equity / Financial Research</span><span class="pill">Regression Analysis</span><span class="pill">EDA</span><span class="pill">Demand Forecasting</span><span class="pill">Market Research</span>
+      </div>
+      <div>
+        <h3>Business</h3>
+        <span class="pill">Strategy Consulting</span><span class="pill">Market Sizing</span><span class="pill">Competitive Benchmarking</span><span class="pill">GTM</span><span class="pill">Process Optimization</span>
+      </div>
+      <div>
+        <h3>Certifications</h3>
+        <span class="pill">McKinsey Forward Program</span><span class="pill">NISM × SEBI (Distinction)</span><span class="pill">Data Analyst Skill Certification</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="edu">
+  <div class="wrap">
+    <h2><span class="num">04</span>Education &amp; Recognition</h2>
+    <div class="item">
+      <div><strong>B.Sc. Economics (Honours)</strong> — Symbiosis School of Economics, Pune · CGPA 8.4/10.0</div>
+      <div class="when">Expected May 2027</div>
+    </div>
+    <div class="item">
+      <div><strong>Cambridge International AS &amp; A Level</strong> — Business, Accounting, Economics (Top 6% nationally)</div>
+      <div class="when">2021 – 2024</div>
+    </div>
+    <div class="item">
+      <div><strong>Gold Medalist</strong> — SRCC Global Economics Olympiad (Regional, 2023) · <strong>Published Author</strong> — Digital Commerce Guide</div>
+      <div class="when">2023</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="yr"></span> Kalash Jain · Pune, India ·
+    <a href="mailto:kalashj727@gmail.com">kalashj727@gmail.com</a> ·
+    <a href="https://linkedin.com/in/kalashjainx" target="_blank" rel="noopener">linkedin.com/in/kalashjainx</a>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
